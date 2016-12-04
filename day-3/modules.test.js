@@ -1,17 +1,19 @@
 const { isTriangle } = require('./modules')
 
-test('is not a triangle', () => {
-  const triangle = [5, 10, 25]
+describe('Day 3 - Modules', () => {
+  it('is not a triangle', () => {
+    const triangle = [5, 10, 25]
 
-  const itIs = isTriangle(triangle)
+    const itIs = isTriangle(triangle)
 
-  expect(itIs).toBe(false)
-})
+    expect(itIs).toBe(false)
+  })
 
-test('it is a triangle', () => {
-  const triangle = [1, 1, 1]
+  it('is a triangle', () => {
+    const triangle = [1, 1, 1]
 
-  const itIs = isTriangle(triangle)
+    const itIs = isTriangle(triangle)
 
-  expect(itIs).toBe(true)
+    expect(itIs).toBe(true)
+  })
 })
