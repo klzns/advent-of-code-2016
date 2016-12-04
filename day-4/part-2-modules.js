@@ -8,24 +8,23 @@ function parseRoom(room) {
   }
 }
 
-function nextLetterOf(letter) {
+const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+const posAlphabet = alphabet.split('')
+const alphabetLenght = posAlphabet.length
+
+function rotateLetter(letter, times) {
   if (letter === ' ') return letter
 
-  var c = letter.charCodeAt(0)
-  switch (c) {
-    case 122:
-      return 'a'
-    default:
-      return String.fromCharCode(++c)
-  }
+  const index = posAlphabet.indexOf(letter)
+  const rest = times % alphabetLenght
+  const move = rest + index
+  const newIndex = move >= alphabetLenght ? move - alphabetLenght : move
+
+  return posAlphabet[newIndex]
 }
 
 function rotate(letters, times) {
-  for (let i = 0; i < times; i++) {
-    letters = letters.map((letter) => nextLetterOf(letter))
-  }
-
-  return letters
+  return letters.map((letter) => rotateLetter(letter, times))
 }
 
 function decode(room) {
