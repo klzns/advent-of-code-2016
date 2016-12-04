@@ -1,8 +1,8 @@
-const { decode, parseRoom, rotate } = require('./part-2-modules')
+const { parseRoom, rotate } = require('./part-2-modules')
 
 let room = 'qzmt-zixmtkozy-ivhz-343[abxyz]'
 
-const { letters, checkSum, sectionId } = parseRoom(room)
+const { letters, sectionId } = parseRoom(room)
 const rotatedLetters = rotate(letters, sectionId)
 
 const expected = 'very encrypted name'

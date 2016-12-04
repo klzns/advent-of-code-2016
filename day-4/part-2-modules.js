@@ -8,16 +8,20 @@ function parseRoom(room) {
 
 function nextLetterOf(letter) {
   if (letter === ' ') return letter
-  var c = letter.charCodeAt(0);
+
+  var c = letter.charCodeAt(0)
   switch (c) {
-    case 122: return 'a';
-    default: return String.fromCharCode(++c);
+    case 122:
+      return 'a'
+    default:
+      return String.fromCharCode(++c)
   }
 }
 
 function rotate(letters, times) {
-  for (let i = 0; i < times; i++)
+  for (let i = 0; i < times; i++) {
     letters = letters.map((letter) => nextLetterOf(letter))
+  }
 
   return letters
 }

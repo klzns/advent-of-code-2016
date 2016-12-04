@@ -28,16 +28,16 @@ function move(pos, direction) {
   switch (direction) {
     case U:
       tempPos = [pos[0], pos[1] + 1]
-      break;
+      break
     case D:
       tempPos = [pos[0], pos[1] - 1]
-      break;
+      break
     case L:
       tempPos = [pos[0] - 1, pos[1]]
-      break;
+      break
     case R:
       tempPos = [pos[0] + 1, pos[1]]
-      break;
+      break
     default:
       throw new Error(`Direction ${direction} does not exist`)
   }

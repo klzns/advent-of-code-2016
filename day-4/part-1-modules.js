@@ -17,7 +17,7 @@ function countLetters(letters) {
 function mapLettersToArray(count) {
   let result = []
 
-  for (letter in count) {
+  for (let letter in count) {
     result.push({ letter, value: count[letter]})
   }
 
@@ -60,7 +60,7 @@ function check(letters, checkSum) {
 function decode(room) {
   const { letters, checkSum, sectionId } = parseRoom(room)
   const realRoom = check(letters, checkSum)
-  
+
   return realRoom ? sectionId : null
 }
 

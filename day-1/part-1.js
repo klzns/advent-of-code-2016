@@ -4,7 +4,7 @@ const RIGHT = 'RIGHT'
 const LEFT = 'LEFT'
 const path = new RegExp(/([LR])(\d{1,3})/)
 function getInstruction(instruction) {
-  const [all, direction, blocks] = path.exec(instruction)
+  const [, direction, blocks] = path.exec(instruction)
 
   return {
     direction: direction === 'R' ? RIGHT : LEFT,

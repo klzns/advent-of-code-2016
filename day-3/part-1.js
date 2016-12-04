@@ -6,9 +6,10 @@ function isTriangle(triangle) {
          triangle[2] + triangle[0] > triangle[1]
 }
 
-const example = [5, 10, 25]
+// TODO - add to tests
+// const example = [5, 10, 25]
 
-function parseInput(input, part2) {
+function parseInput(input) {
   return input.split('\n')
     .map((line) =>
       line.split(' ').reduce((triangle, item) =>
