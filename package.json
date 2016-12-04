@@ -1,0 +1,22 @@
+{
+  "name": "advent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "''",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brenoc/advent-of-code-2016.git"
+  },
+  "author": "Breno Calazans",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brenoc/advent-of-code-2016/issues"
+  },
+  "homepage": "https://github.com/brenoc/advent-of-code-2016#readme",
+  "devDependencies": {
+    "jest-cli": "^17.0.3"
+  }
+}

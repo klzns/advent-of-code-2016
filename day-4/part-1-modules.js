@@ -64,8 +64,4 @@ function decode(room) {
   return realRoom ? sectionId : null
 }
 
-const input = require('./day-4-input')
-
-console.log(input.split('\n').reduce((sum, room) => sum + (decode(room) || 0), 0))
-
 module.exports = decode

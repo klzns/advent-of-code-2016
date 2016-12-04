@@ -42,15 +42,4 @@ function findRoom(rooms, name) {
   return null
 }
 
-const input = require('./day-4-input')
-
-const rooms = input.split('\n')
-const foundRoom = findRoom(rooms, 'north')
-
-if (foundRoom) {
-  console.log(`Found room '${foundRoom.name}'. Section ID: ${foundRoom.sectionId}`)
-} else {
-  console.log('Room not found')
-}
-
-module.exports = { decode, parseRoom, rotate }
+module.exports = { findRoom, decode, parseRoom, rotate }

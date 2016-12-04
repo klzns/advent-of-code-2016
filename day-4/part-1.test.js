@@ -1,4 +1,4 @@
-const decode = require('./day-4-part-1')
+const decode = require('./part-1-modules')
 
 let rooms = [
   { room: 'aaaaa-bbb-z-y-x-123[abxyz]', expect: true },

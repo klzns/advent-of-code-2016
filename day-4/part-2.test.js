@@ -1,4 +1,4 @@
-const { decode, parseRoom, rotate } = require('./day-4-part-2')
+const { decode, parseRoom, rotate } = require('./part-2-modules')
 
 let room = 'qzmt-zixmtkozy-ivhz-343[abxyz]'
 
