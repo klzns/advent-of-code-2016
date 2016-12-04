@@ -8,10 +8,8 @@ let rooms = [
 ]
 
 rooms.map((room) => {
-  const realRoom = decode(room.room) !== null
-  if (realRoom === room.expect) {
-    console.log(`OK: ${room.room}`)
-  } else {
-    console.error(`Error: ${room.room} expected to be ${room.expect}`)
-  }
+  test(`room ${room.room} is ${room.expect ? 'real' : 'false'}`, () => {
+    const realRoom = decode(room.room) !== null
+    expect(realRoom).toBe(room.expect)
+  })
 })

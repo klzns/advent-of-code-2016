@@ -1,13 +1,5 @@
-var input = require('./input')
-
-function isTriangle(triangle) {
-  return triangle[0] + triangle[1] > triangle[2] &&
-         triangle[1] + triangle[2] > triangle[0] &&
-         triangle[2] + triangle[0] > triangle[1]
-}
-
-// TODO - add to tests
-// const example = [5, 10, 25]
+const { isTriangle } = require('./modules')
+const input = require('./input')
 
 function parseInput(input) {
   let lines = input.split('\n')
