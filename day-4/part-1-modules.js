@@ -1,9 +1,12 @@
 function parseRoom(room) {
-  let [end, ...letters] = room.split('-').reverse()
-  letters = letters.join('').split('')
-  let sectionId = parseInt(end.slice(0, end.indexOf('[')))
-  let checkSum = end.slice(end.indexOf('[') + 1, -1)
-  return { letters, checkSum, sectionId }
+  const r = new RegExp(/([a-z-]+)-(\d+)\[(.+?)]/)
+  const [, letters, sectionId, checkSum] = room.match(r)
+
+  return {
+    checkSum,
+    letters: letters.replace(/-/g, '').split(''),
+    sectionId: parseInt(sectionId),
+  }
 }
 
 function countLetters(letters) {

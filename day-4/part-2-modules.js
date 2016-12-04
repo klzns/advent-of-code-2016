@@ -1,9 +1,11 @@
 function parseRoom(room) {
-  let splitted = room.split('-')
-  let letters = splitted.slice(0, -1).join(' ').split('')
-  let end = splitted.slice(-1)[0]
-  let sectionId = parseInt(end.slice(0, end.indexOf('[')))
-  return { letters, sectionId }
+  const r = new RegExp(/([a-z-]+)-(\d+)\[(.+?)]/)
+  const [, letters, sectionId] = room.match(r)
+
+  return {
+    letters: letters.replace(/-/g, ' ').split(''),
+    sectionId: parseInt(sectionId),
+  }
 }
 
 function nextLetterOf(letter) {
