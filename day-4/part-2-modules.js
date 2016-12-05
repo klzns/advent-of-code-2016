@@ -16,9 +16,7 @@ function rotateLetter(letter, times) {
   if (letter === ' ') return letter
 
   const index = posAlphabet.indexOf(letter)
-  const rest = times % alphabetLenght
-  const move = rest + index
-  const newIndex = move >= alphabetLenght ? move - alphabetLenght : move
+  const newIndex = (index + times) % alphabetLenght
 
   return posAlphabet[newIndex]
 }
