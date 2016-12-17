@@ -1,6 +1,6 @@
 const { genHash, hash, findInterestingHash, findPasswordPart1, findPasswordPart2 } = require('../part-1-2')
 
-describe.only('Day 5', () => {
+describe('Day 5', () => {
   it('should hash', () => {
     const doorId = 'abc'
     const index = 3231929
