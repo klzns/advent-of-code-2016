@@ -1,9 +1,23 @@
-module.exports.solve = function solve(input) {
+module.exports.solvePart1 = function solve(input) {
   const parsedInput = parseInput(input)
 
   const message = parsedInput.reduce((message, line) => message + mostFrequent(line), '')
 
   return message
+}
+
+module.exports.solvePart2 = function solve(input) {
+  const parsedInput = parseInput(input)
+
+  const message = parsedInput.reduce((message, line) => message + leastFrequent(line), '')
+
+  return message
+}
+
+const leastFrequent = (line) => {
+  const count = line.reduce(incrementOrInsert, {})
+  const countArray = objToArray(count).sort(sort)
+  return countArray[countArray.length - 1].char
 }
 
 const mostFrequent = (line) => {
