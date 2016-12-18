@@ -1,4 +1,4 @@
-const { solvePart1, solvePart2 } = require('../part-1')
+const { solvePart1, solvePart2 } = require('../part-1-2')
 
 describe('Day 6', () => {
   describe('Part 1', () => {
